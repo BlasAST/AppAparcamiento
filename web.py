@@ -9,7 +9,7 @@ app = Flask(__name__, template_folder='templates', static_url_path='/static')
 app.config['SECRET_KEY'] = 'supersecreto'
 app.config['SESSION_TYPE'] = 'filesystem'
 Session(app)
-
+# a
 index_controller = index()
 registro_controller = registro()
 sesion_controller = sesion()
