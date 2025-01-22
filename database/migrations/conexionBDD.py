@@ -5,10 +5,11 @@ from mysql.connector import Error
 def conectar():
     try:
         connection = mysql.connector.connect(
-            host='localhost',
-            database='Aparcamiento',
+            host='mysql_aparcamiento',
             user='root',
-            password=''
+            password='blas1234',
+            database='db_aparcamiento'
+
         )
         if connection.is_connected():
             db_Info = connection.get_server_info()
