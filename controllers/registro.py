@@ -2,7 +2,8 @@
 from database.migrations.conexionBDD import conectar
 from flask import render_template, request, jsonify
 
-my, connection = conectar()
+connection = conectar()
+my=connection.cursor()
 
 
 class registro():

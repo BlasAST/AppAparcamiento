@@ -4,6 +4,10 @@ from controllers.index import index
 from controllers.registro import registro
 from controllers.sesion import sesion
 from controllers.inicioSesion import inicioSesion
+# from database.migrations import migrate
+# Se debe de ejecutar manualmente dado que empece haciendolo asi,
+# ya lo solucionaré en cuanto pueda
+# migrate.runBD()
 
 app = Flask(__name__, template_folder='templates', static_url_path='/static')
 app.config['SECRET_KEY'] = 'supersecreto'

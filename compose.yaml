@@ -25,6 +25,21 @@ services:
       - "80:5000"
     volumes:
       - .:/app
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    container_name: phpmyadmin
+    ports:
+      - "8080:80"
+    networks:
+      - red_aparcamiento
+    depends_on:
+      - mysql
+    environment:
+      PMA_HOST: mysql
+      MYSQL_ROOT_PASSWORD: blas1234
+
+
 
 networks:
   red_aparcamiento:

@@ -1,7 +1,8 @@
 from flask import Flask, jsonify,request,render_template
 from database.migrations.conexionBDD import conectar
 
-my,connection=conectar()
+connection=conectar()
+my= connection.cursor()
 
 class inicioSesion():
 

@@ -14,8 +14,7 @@ def conectar():
         if connection.is_connected():
             db_Info = connection.get_server_info()
             print("Conectado a MySQL Server versión ", db_Info)
-            my = connection.cursor()
-            return my,connection
+            return connection
     except Error as e:
         print("Error al conectar a MySQL", e)
-        return e
+        return None, None

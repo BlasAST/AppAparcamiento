@@ -1,6 +1,7 @@
 from conexionBDD import conectar
 
-my,connection = conectar()
+connection = conectar()
+my= connection.cursor()
 
 
 class Empleado:
@@ -76,8 +77,8 @@ def interfaz():
         print("Ya existe la tabla de sesiones")
 
 
-def main():
+def runBD():
     interfaz()
 
 
-main()
+runBD()
