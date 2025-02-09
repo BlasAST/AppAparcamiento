@@ -2,7 +2,6 @@ window.addEventListener('DOMContentLoaded', iniciar);
 
 function iniciar() {
     iniciadoPor();
-    cerrarSesion();
 }
 
 
@@ -18,12 +17,4 @@ async function iniciadoPor() {
     } catch (error) {
         console.log(error);
     }
-}
-
-
-function cerrarSesion(){
-    let cerrar=document.querySelector('.cierre');
-    cerrar.addEventListener('click',()=>{
-        window.location.href='/'
-    })
 }
