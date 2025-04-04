@@ -75,6 +75,19 @@ def home():
     if middelware():
         return render_template('index.html')
     return sesion_controller.home()
+@app.route('/entrada')
+def entrada():
+    if middelware():
+        return render_template('index.html')
+    return sesion_controller.entrada()
+
+@app.route('/salida')
+def salida():
+    if middelware():
+        return render_template('index.html')
+    return sesion_controller.salida()
+
+
 @app.route('/posicionamiento')
 def posicionamiento():
     if middelware():
